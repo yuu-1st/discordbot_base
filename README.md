@@ -1,0 +1,2 @@
+# discordbot_base
+discord.jsを使ったbotを作成する基盤となるリポジトリです
