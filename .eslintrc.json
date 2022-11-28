@@ -1,0 +1,70 @@
+{
+  "env": {
+    "es2021": true,
+    "node": true
+  },
+  "extends": ["airbnb-base", "plugin:jsdoc/recommended-typescript"],
+  "globals": {
+    "NodeJS": true
+  },
+  "parser": "@typescript-eslint/parser",
+  "parserOptions": {
+    "ecmaVersion": "latest",
+    "sourceType": "module"
+  },
+  "plugins": ["@typescript-eslint", "jsdoc"],
+  "rules": {
+    "import/no-unresolved": "off",
+    "import/extensions": "off",
+    "no-await-in-loop": "off",
+    "object-curly-newline": "off",
+    "operator-linebreak": "off",
+    "implicit-arrow-linebreak": "off",
+    "jsdoc/require-throws": "warn",
+    "import/prefer-default-export": "off",
+    "jsdoc/require-jsdoc": [
+      "warn",
+      {
+        "publicOnly": true,
+        "require": {
+          "ArrowFunctionExpression": true,
+          "ClassDeclaration": true,
+          "ClassExpression": true,
+          "FunctionDeclaration": true,
+          "FunctionExpression": true,
+          "MethodDefinition": true
+        }
+      }
+    ],
+    // prettierと競合するのでoff
+    "function-paren-newline": "off"
+  },
+  "overrides": [
+    {
+      "files": ["**/*.ts"],
+      "rules": {
+        "no-unused-vars": "off",
+        "@typescript-eslint/no-unused-vars": ["error"],
+        "@typescript-eslint/no-floating-promises": "error",
+        "no-useless-constructor": "off",
+        "@typescript-eslint/no-useless-constructor": "error",
+        "no-empty-function": "off",
+        "@typescript-eslint/no-empty-function": "error",
+        "no-use-before-define": "off",
+        "@typescript-eslint/no-use-before-define": "error",
+        "no-shadow": "off",
+        "@typescript-eslint/no-shadow": "error"
+      },
+      "parserOptions": {
+        "project": ["./tsconfig.json"]
+      }
+    },
+    {
+      "files": ["**/*.test.ts", "tests/setup.ts", "tests/teardown.ts"],
+      "rules": {
+        "eslintimport/no-extraneous-dependencies": "off",
+        "no-console": "off"
+      }
+    }
+  ]
+}

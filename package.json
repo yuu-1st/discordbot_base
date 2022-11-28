@@ -1,0 +1,48 @@
+{
+  "name": "discordbot_base",
+  "version": "0.1.0",
+  "description": "discord.jsを使ったbotを作成する基盤となるリポジトリです",
+  "main": "dist/index.js",
+  "type": "module",
+  "scripts": {
+    "about:compile:": "echo 'src/をコンパイルします。'",
+    "compile": "tsc",
+    "about:start": "echo 'dist/index.jsをコンパイルし、実行します。'",
+    "start": "tsc && node --enable-source-maps dist/index.js",
+    "about:ts-start": "echo 'src/index.tsを実行します。'",
+    "ts-start": "ts-node src/index.ts",
+    "about:run": "echo 'dist/index.jsを実行します。'",
+    "run": "node dist/index.js"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/yuu-1st/discordbot_base.git"
+  },
+  "keywords": [],
+  "author": "yuu-1st",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/yuu-1st/discordbot_base/issues"
+  },
+  "homepage": "https://github.com/yuu-1st/discordbot_base#readme",
+  "devDependencies": {
+    "@types/node": "^18.15.3",
+    "@typescript-eslint/eslint-plugin": "^5.55.0",
+    "@typescript-eslint/parser": "^5.55.0",
+    "eslint": "^8.46.0",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.28.0",
+    "eslint-plugin-jsdoc": "^46.4.6",
+    "ts-node": "^10.9.1",
+    "typescript": "^5.1.6"
+  },
+  "dependencies": {
+    "@types/node-cron": "^3.0.8",
+    "dayjs": "^1.11.9",
+    "discord.js": "^14.13.0",
+    "jsonc-parser": "^3.2.0",
+    "log4js": "^6.9.1",
+    "node-cron": "^3.0.2",
+    "zod": "^3.22.2"
+  }
+}
