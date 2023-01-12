@@ -14,16 +14,13 @@ const ConnectDiscord = async (impartialShareObject: ImpartialShareObject<'client
       GatewayIntentBits.GuildVoiceStates,
     ],
     partials: [Partials.Message, Partials.Channel, Partials.Reaction],
-    rest: {
-      timeout: 50, // デフォルト値
-    },
   });
 
   shareObject.client = client;
 
   client.on('ready', () => {});
 
-  await client.login(process.env.BOT_TOKEN);
+  await client.login(shareObject.config.DiscordBotToken);
 };
 
 export default ConnectDiscord;
