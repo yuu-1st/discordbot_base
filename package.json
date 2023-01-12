@@ -9,6 +9,8 @@
     "compile": "tsc",
     "about:start": "echo 'dist/index.jsをコンパイルし、実行します。'",
     "start": "tsc && node --enable-source-maps dist/index.js",
+    "about:ts-start": "echo 'src/index.tsを実行します。'",
+    "ts-start": "ts-node src/index.ts",
     "about:run": "echo 'dist/index.jsを実行します。'",
     "run": "node dist/index.js"
   },
