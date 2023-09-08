@@ -12,7 +12,9 @@
     "about:ts-start": "echo 'src/index.tsを実行します。'",
     "ts-start": "ts-node src/index.ts",
     "about:run": "echo 'dist/index.jsを実行します。'",
-    "run": "node dist/index.js"
+    "run": "node dist/index.js",
+    "about:commitmsg": "echo 'コミットメッセージ編集の際に Git フックが走るようにします'",
+    "commitmsg": "commitlint -e $GIT_PARAMS"
   },
   "repository": {
     "type": "git",
@@ -26,6 +28,8 @@
   },
   "homepage": "https://github.com/yuu-1st/discordbot_base#readme",
   "devDependencies": {
+    "@commitlint/cli": "^17.7.1",
+    "@commitlint/config-conventional": "^17.7.0",
     "@types/node": "^18.15.3",
     "@typescript-eslint/eslint-plugin": "^5.55.0",
     "@typescript-eslint/parser": "^5.55.0",
@@ -33,6 +37,7 @@
     "eslint-config-airbnb-base": "^15.0.0",
     "eslint-plugin-import": "^2.28.0",
     "eslint-plugin-jsdoc": "^46.4.6",
+    "husky": "^8.0.3",
     "ts-node": "^10.9.1",
     "typescript": "^5.1.6"
   },
